@@ -613,6 +613,10 @@ strong { color: var(--text); font-weight: 600; }
 .contact-section {
   position: relative;
   overflow: hidden;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .contact-bg {
@@ -962,6 +966,13 @@ strong { color: var(--text); font-weight: 600; }
 
   .hero-credit {
     right: 3rem;
+  }
+
+  .contact-section {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
