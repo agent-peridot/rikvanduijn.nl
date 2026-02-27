@@ -651,23 +651,13 @@ strong { color: var(--text); font-weight: 600; }
   margin-bottom: 0.5rem;
 }
 
-.headshot-placeholder {
+.headshot {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: var(--bg-surface);
-  border: 2px dashed var(--border-hover);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  border: 2px solid var(--border-hover);
   flex-shrink: 0;
-}
-
-.headshot-placeholder span {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
 }
 
 .contact-intro {
