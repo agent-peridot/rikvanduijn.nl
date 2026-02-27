@@ -577,6 +577,8 @@ strong { color: var(--text); font-weight: 600; }
   font-weight: 600;
   color: var(--text);
   margin-bottom: 0.25rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .how-step p {
