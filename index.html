@@ -6,6 +6,16 @@
   <title>Rik van Duijn — Development Consultant</title>
   <meta name="description" content="I help development teams ship better, faster, and with AI. Mobile development, AI integration, automated testing, and workflow automation.">
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='monospace' fill='%2338bdf8'>rvd</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rik van Duijn — Development Consultant">
+  <meta property="og:description" content="I help development teams ship better, faster, and with AI. Mobile development, AI integration, team enablement.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rikvanduijn.nl">
+  <meta property="og:image" content="https://www.rikvanduijn.nl/assets/rik-dancer.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,6 +23,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Skip to content (a11y) -->
+  <a href="#what-i-do" class="skip-link">Skip to content</a>
 
   <!-- ====== HERO — Full-bleed dancer photo ====== -->
   <section class="hero" id="top">
@@ -44,6 +57,7 @@
         <a href="#top" class="sidebar-logo">rvd<span>.</span></a>
         <div class="sidebar-links">
           <a href="#what-i-do" data-section="what-i-do">What I Do</a>
+          <a href="#how-i-work" data-section="how-i-work">How I Work</a>
           <a href="#track-record" data-section="track-record">Track Record</a>
           <a href="#contact" data-section="contact">Let's Talk</a>
         </div>
@@ -70,6 +84,7 @@
     </header>
     <div class="mobile-menu" id="mobile-menu">
       <a href="#what-i-do">What I Do</a>
+      <a href="#how-i-work">How I Work</a>
       <a href="#track-record">Track Record</a>
       <a href="#contact">Let's Talk</a>
     </div>
@@ -88,12 +103,11 @@
           <p>I work with development teams who know they could be shipping faster. Whether it's introducing AI-powered workflows, levelling up mobile development practices, or building the automation that compliance demands &mdash; I embed with your team, set things up properly, and step back.</p>
         </div>
 
-        <div class="services-grid">
+        <div class="services-list">
 
-          <article class="service-card">
-            <div class="service-card-bg">
-              <img src="assets/section-code.png" alt="Code and data illustration" />
-              <div class="service-card-overlay"></div>
+          <article class="service-card service-card--img-left">
+            <div class="service-card-image">
+              <img src="assets/code-dark.jpg" alt="Dark code editor on screen" loading="lazy" />
             </div>
             <div class="service-card-body">
               <h3>AI-Powered Development</h3>
@@ -101,10 +115,9 @@
             </div>
           </article>
 
-          <article class="service-card">
-            <div class="service-card-bg">
-              <img src="assets/hero-mobile.png" alt="Mobile development illustration" />
-              <div class="service-card-overlay"></div>
+          <article class="service-card service-card--img-right">
+            <div class="service-card-image">
+              <img src="assets/mobile-dev.jpg" alt="Smartphone on desk" loading="lazy" />
             </div>
             <div class="service-card-body">
               <h3>Mobile Development</h3>
@@ -112,10 +125,9 @@
             </div>
           </article>
 
-          <article class="service-card">
-            <div class="service-card-bg">
-              <img src="assets/section-health.png" alt="Health tech illustration" />
-              <div class="service-card-overlay"></div>
+          <article class="service-card service-card--img-left">
+            <div class="service-card-image">
+              <img src="assets/automation.jpg" alt="Server infrastructure" loading="lazy" />
             </div>
             <div class="service-card-body">
               <h3>Automated Testing &amp; Compliance</h3>
@@ -123,10 +135,9 @@
             </div>
           </article>
 
-          <article class="service-card">
-            <div class="service-card-bg">
-              <img src="assets/section-creative.png" alt="Creative tech illustration" />
-              <div class="service-card-overlay"></div>
+          <article class="service-card service-card--img-right">
+            <div class="service-card-image">
+              <img src="assets/team-collab.jpg" alt="Team collaborating" loading="lazy" />
             </div>
             <div class="service-card-body">
               <h3>CI/CD &amp; Workflow Automation</h3>
@@ -137,10 +148,36 @@
         </div>
       </section>
 
+      <!-- HOW I WORK -->
+      <section id="how-i-work" class="section">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2>How I Work</h2>
+        </div>
+
+        <div class="how-steps">
+          <div class="how-step">
+            <span class="how-step-number">1</span>
+            <h3>We talk</h3>
+            <p>Tell me what's going on. No formal proposals needed.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-number">2</span>
+            <h3>I embed</h3>
+            <p>I join your team, learn the codebase, and start shipping improvements.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-number">3</span>
+            <h3>I step back</h3>
+            <p>Once the processes work and your team owns them, I move on.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- TRACK RECORD -->
       <section id="track-record" class="section">
         <div class="section-header">
-          <span class="section-number">02</span>
+          <span class="section-number">03</span>
           <h2>Track Record</h2>
         </div>
 
@@ -175,36 +212,55 @@
         </div>
       </section>
 
+      <!-- TESTIMONIAL -->
+      <section class="section testimonial-section">
+        <blockquote class="testimonial">
+          <p>"Testimonial coming soon — ask me about references."</p>
+        </blockquote>
+      </section>
+
       <!-- CONTACT -->
-      <section id="contact" class="section section--last">
-        <div class="section-header">
-          <span class="section-number">03</span>
-          <h2>Let's Talk</h2>
+      <section id="contact" class="section section--last contact-section">
+        <div class="contact-bg">
+          <img src="assets/utrecht-night.jpg" alt="Utrecht at night" loading="lazy" />
+          <div class="contact-bg-overlay"></div>
         </div>
+        <div class="contact-inner">
+          <div class="section-header">
+            <span class="section-number">04</span>
+            <h2>Let's Talk</h2>
+          </div>
 
-        <p class="contact-intro">Based in Utrecht. I work with teams who care about their craft. No formal proposals &mdash; just tell me what's going on and we'll figure out if I can help.</p>
+          <div class="contact-top">
+            <div class="headshot-placeholder" aria-label="Photo coming soon">
+              <span>RvD</span>
+            </div>
+            <div>
+              <p class="contact-intro">Based in Utrecht. I work with teams who care about their craft. No formal proposals &mdash; just tell me what's going on and we'll figure out if I can help.</p>
+              <div class="contact-availability">
+                <span class="available-dot"></span>
+                Available for new engagements
+              </div>
+            </div>
+          </div>
 
-        <div class="contact-availability">
-          <span class="available-dot"></span>
-          Available for new engagements
-        </div>
-
-        <div class="contact-links">
-          <a href="mailto:hello@rikvanduijn.nl" class="contact-link contact-link--primary">
-            <span class="contact-link-label">Email</span>
-            <span class="contact-link-value">hello@rikvanduijn.nl</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/rikvanduijn/" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-link-label">LinkedIn</span>
-            <span class="contact-link-value">Rik van Duijn</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <a href="https://github.com/isilher" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-link-label">GitHub</span>
-            <span class="contact-link-value">isilher</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
+          <div class="contact-links">
+            <a href="mailto:hello@rikvanduijn.nl" class="contact-link contact-link--primary">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">hello@rikvanduijn.nl</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rikvanduijn/" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">Rik van Duijn</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="https://github.com/isilher" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">isilher</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -216,6 +272,9 @@
 
     </main>
   </div>
+
+  <!-- Floating CTA -->
+  <a href="#contact" class="floating-cta" id="floating-cta" aria-label="Let's talk">Let's talk <span>&rarr;</span></a>
 
   <!-- ====== JS ====== -->
   <script>
@@ -238,7 +297,7 @@
     });
 
     // Scroll reveal
-    const revealEls = document.querySelectorAll('.section-header, .section-lead, .service-card, .proof-block, .worked-with, .contact-intro, .contact-availability, .contact-links');
+    const revealEls = document.querySelectorAll('.section-header, .section-lead, .service-card, .proof-block, .worked-with, .contact-top, .contact-links, .how-step, .testimonial');
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -268,22 +327,24 @@
 
     sections.forEach(s => sectionObserver.observe(s));
 
-    // Parallax on hero image (subtle)
-    const heroImg = document.querySelector('.hero-image img');
-    let ticking = false;
+    // Floating CTA — show after hero, hide when contact visible
+    const floatingCta = document.getElementById('floating-cta');
+    const contactSection = document.getElementById('contact');
+    const heroSection = document.querySelector('.hero');
 
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrolled = window.scrollY;
-          if (scrolled < window.innerHeight) {
-            heroImg.style.transform = `scale(1.1) translateY(${scrolled * 0.15}px)`;
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+    const floatingObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.target === heroSection) {
+          floatingCta.classList.toggle('visible', !entry.isIntersecting);
+        }
+        if (entry.target === contactSection) {
+          if (entry.isIntersecting) floatingCta.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    floatingObserver.observe(heroSection);
+    floatingObserver.observe(contactSection);
 
     // Mobile nav background on scroll
     const mobileNav = document.getElementById('mobile-nav');
