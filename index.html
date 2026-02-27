@@ -8,189 +8,164 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Critical inline CSS for fast first paint */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #111111;
+      color: #f0ece6;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .bento {
+      display: grid;
+      gap: 14px;
+      padding: 14px;
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 100vh;
+      grid-template-columns: 1fr;
+    }
+    .tile {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 32px;
+      opacity: 0;
+      transform: scale(0.96) translateY(12px);
+      transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                  transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease;
+    }
+    .tile.revealed {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top Bar -->
-  <nav class="top-bar">
-    <a href="#" class="nav-name">Rik van Duijn</a>
-    <div class="nav-links">
-      <a href="#what-i-do">What I Do</a>
-      <a href="#track-record">Track Record</a>
-      <a href="#contact">Contact</a>
+  <div class="bento" role="main">
+
+    <!-- Hero Tile -->
+    <div class="tile tile-hero" data-delay="0">
+      <span class="tile-label">Hello</span>
+      <h1 class="hero-name">Rik van Duijn</h1>
+      <p class="hero-tagline">I help development teams<br>ship better, faster, and with AI.</p>
+      <a href="mailto:hello@rikvanduijn.nl" class="cta">Let's talk
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
-    <button class="mobile-menu-btn" aria-label="Open menu">
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu">
-    <a href="#what-i-do">What I Do</a>
-    <a href="#track-record">Track Record</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>I help development teams ship better, faster, and with AI.</h1>
-        <p class="hero-subtitle">Mobile Development &middot; AI Tooling &middot; Team Enablement</p>
-        <a href="#contact" class="cta-button">Let's talk</a>
-      </div>
-      <div class="hero-image">
-        <img src="assets/rik-dancer.jpg" alt="Rik van Duijn" loading="eager">
-      </div>
+    <!-- Photo Tile -->
+    <div class="tile tile-photo" data-delay="1">
+      <img src="assets/rik-dancer.jpg" alt="Rik van Duijn" loading="eager">
     </div>
-  </section>
 
-  <!-- What I Do -->
-  <section class="section" id="what-i-do">
-    <h2 class="section-title">What I Do</h2>
-    <div class="services">
-
-      <div class="service-card reveal">
-        <h3>Introduce AI to Your Workflow</h3>
-        <p>Your developers are curious about AI tools but nobody's figured out how to use them productively. I've shipped production code with AI assistants for years &mdash; I'll set up the tools, establish quality gates, and get your team from experimenting to delivering.</p>
-      </div>
-
-      <div class="service-card reveal">
-        <h3>Level Up Your Mobile Team</h3>
-        <p>7+ years of React Native across health tech, mobility platforms, and agency work. I can audit your app architecture, pair with your developers, and help your team build apps that actually work on both platforms.</p>
-      </div>
-
-      <div class="service-card reveal">
-        <h3>Build Professional Structure (Pragmatically)</h3>
-        <p>CI/CD that works, code review culture that doesn't slow you down, shipping rhythms that stick. I set up the infrastructure and habits, then step back. No 200-page process documents.</p>
-      </div>
-
+    <!-- Stat Tile -->
+    <div class="tile tile-stat" data-delay="2">
+      <span class="stat-number">11+</span>
+      <span class="stat-label">years building<br>software</span>
     </div>
-    <div class="section-cta">
-      <a href="#contact" class="cta-button">Let's talk about your team</a>
+
+    <!-- Service 1 — AI -->
+    <div class="tile tile-service tile-ai" data-delay="3">
+      <span class="tile-label">Service</span>
+      <h2>AI in Your Workflow</h2>
+      <p>Your team is curious about AI tools but nobody knows how to use them productively yet. I do — daily. I'll set up the tools, quality gates, and get your team from experimenting to delivering.</p>
     </div>
-  </section>
 
-  <!-- Track Record -->
-  <section class="section section-alt" id="track-record">
-    <h2 class="section-title">Track Record</h2>
-    <div class="proof-grid">
-
-      <div class="proof-card reveal">
-        <span class="proof-highlight">11+</span>
-        <span class="proof-label">years building software professionally</span>
-      </div>
-
-      <div class="proof-card reveal">
-        <span class="proof-highlight">Health Tech</span>
-        <span class="proof-label">Built a cancer recovery app used by thousands of patients</span>
-      </div>
-
-      <div class="proof-card reveal">
-        <span class="proof-highlight">CI/CD</span>
-        <span class="proof-label">Automated build and deployment pipelines across multiple teams</span>
-      </div>
-
-      <div class="proof-card reveal">
-        <span class="proof-highlight">AI Daily</span>
-        <span class="proof-label">Ships production code with AI assistants every single day</span>
-      </div>
-
+    <!-- Service 2 — Mobile -->
+    <div class="tile tile-service tile-mobile" data-delay="4">
+      <span class="tile-label">Service</span>
+      <h2>Mobile Development</h2>
+      <p>7+ years of React Native. Health tech, mobility platforms, agency projects. I audit architectures, pair with developers, and help teams build apps that actually work.</p>
     </div>
-    <div class="logos">
-      <span class="logo-label">Worked with</span>
-      <div class="logo-list">
+
+    <!-- Service 3 — Process -->
+    <div class="tile tile-service tile-process" data-delay="5">
+      <span class="tile-label">Service</span>
+      <h2>Structure That Ships</h2>
+      <p>CI/CD, code review culture, shipping rhythms. I build the infrastructure and habits, then step back. No 200-page process documents.</p>
+    </div>
+
+    <!-- Proof Tile -->
+    <div class="tile tile-proof" data-delay="6">
+      <span class="tile-label">Track Record</span>
+      <h2>What I've Built</h2>
+      <ul class="proof-list">
+        <li>Cancer recovery app used by thousands of patients.</li>
+        <li>Automated CI/CD pipelines across multiple teams.</li>
+        <li>AI-assisted development workflows shipping daily.</li>
+        <li>Full-stack across React Native, Python, AWS, and more.</li>
+      </ul>
+    </div>
+
+    <!-- Companies Tile -->
+    <div class="tile tile-companies" data-delay="7">
+      <span class="tile-label">Worked with</span>
+      <div class="company-names">
         <span>Tired of Cancer</span>
+        <span class="company-dot"></span>
         <span>Reisbalans</span>
+        <span class="company-dot"></span>
         <span>Inspire Innovation</span>
       </div>
     </div>
-  </section>
 
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="contact-content reveal">
-      <h2 class="section-title">Let's Talk</h2>
-      <p class="contact-note">I'm based in Utrecht and prefer working with teams who care about their craft. No formal proposals needed &mdash; just tell me what's going on.</p>
-      <div class="availability">
+    <!-- Contact Tile -->
+    <div class="tile tile-contact" data-delay="8">
+      <h2>Let's talk</h2>
+      <p class="contact-desc">Based in Utrecht. I work with teams who care about their craft. No formal proposals needed — just tell me what's going on.</p>
+      <a href="mailto:hello@rikvanduijn.nl" class="cta cta-lg">hello@rikvanduijn.nl
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="contact-availability">
         <span class="available-dot"></span>
-        Currently available for new engagements
+        Available for new engagements
       </div>
-      <div class="contact-links">
-        <a href="mailto:hello@rikvanduijn.nl" class="cta-button">hello@rikvanduijn.nl</a>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/rikvanduijn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://github.com/isilher" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          </a>
-        </div>
+      <div class="contact-social">
+        <a href="https://www.linkedin.com/in/rikvanduijn/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/isilher" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Built at night, obviously.</p>
-  </footer>
+  </div>
 
   <script>
-    // Mobile menu toggle
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      document.body.classList.toggle('menu-open');
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuBtn.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('menu-open');
-      });
-    });
-
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.reveal');
+    // Staggered scroll reveal
+    const tiles = document.querySelectorAll('.tile');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          const delay = parseInt(entry.target.dataset.delay || 0) * 80;
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, delay);
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
     });
 
-    revealElements.forEach(el => observer.observe(el));
+    tiles.forEach(el => observer.observe(el));
 
-    // Top bar background on scroll
-    const topBar = document.querySelector('.top-bar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        topBar.classList.add('scrolled');
-      } else {
-        topBar.classList.remove('scrolled');
-      }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Reveal tiles already in viewport on load
+    window.addEventListener('load', () => {
+      tiles.forEach(tile => {
+        const rect = tile.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const delay = parseInt(tile.dataset.delay || 0) * 80;
+          setTimeout(() => {
+            tile.classList.add('revealed');
+          }, delay);
+          observer.unobserve(tile);
         }
       });
     });
